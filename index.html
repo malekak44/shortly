@@ -4,25 +4,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon">
+  <link rel="stylesheet" href="dist/style.css">
   <title>Shortly The URL Shortener</title>
 </head>
 
 <body>
+  <header class="header">
 
-  Features
-  Pricing
-  Resources
+    <nav class="container container--pall flex flex-jc-sb flex-ai-c">
+      <a href="/" class="header__logo">
+        <img src="images/logo.svg" alt="Easybank" />
+      </a>
 
-  Login
-  Sign Up
+      <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
 
-  More than just shorter links
+      <div class="header__links hide-for-mobile">
+        <a href="#">Features</a><a href="#">Pricing</a><a href="#">Resources</a>
+      </div>
 
-  Build your brand’s recognition and get detailed insights
-  on how your links are performing.
+      <div class="header__btns">
+        <a href="#" class="button hide-for-mobile">Login</a>
+        <a href="#" class="button hide-for-mobile">Sign Up</a>
+      </div>
+    </nav>
 
-  Get Started
+    <div class="header__menu has-fade">
+      <a href="#">Features</a>
+      <a href="#">Pricing</a>
+      <a href="#">Resources</a>
+      <div class="header__menu__btns">
+        <a href="#" class="button">Login</a>
+        <a href="#" class="button">Sign Up</a>
+      </div>
+    </div>
+  </header>
 
+  <section class="hero container--pall flex flex-ai-c">
+    <div class="hero__text">
+      <h1>More than just shorter links</h1>
+      <p>Build your brand’s recognition and get detailed insights
+        on how your links are performing.</p>
+      <a href="#" class="button">Get Started</a>
+    </div>
+    <div class="hero__image"></div>
+  </section>
+
+
+  <!--
   Shorten a link here...
 
   Shorten It!
@@ -69,6 +102,8 @@
   Our Team
   Careers
   Contact
+-->
+  <script src="app/js/script.js"></script>
 </body>
 
 </html>

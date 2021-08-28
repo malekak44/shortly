@@ -1,0 +1,34 @@
+.hero {
+    border: 1px solid black;
+    height: 35rem;
+    padding-right: 0;
+    padding-left: 5rem;
+
+    &__text {
+        flex: 1;
+
+        h1 {
+            margin: 0;
+            font-size: 5rem;
+            line-height: 1.16;
+            color: $veryDarkBlue;
+            letter-spacing: -2.5px;
+        }
+
+        p {
+            width: 33rem;
+            margin: 0 0 2.5rem;
+            font-size: 22px;
+            color: $grayishViolet;
+            text-shadow: 0 0 0px;
+        }
+    }
+
+    &__image {
+        flex: 1;
+        height: 100%;
+        border: 1px solid black;
+        background: url('../images/illustration-working.svg');
+        background-repeat: no-repeat;
+    }
+}
