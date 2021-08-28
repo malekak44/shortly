@@ -84,7 +84,7 @@ a {
 
 // Flexbox
 .flex {
-    display: flex;
+    display: flex !important;
 
     &-jc-sb {
         justify-content: space-between;

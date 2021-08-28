@@ -131,7 +131,7 @@ a {
 }
 
 .flex {
-  display: flex;
+  display: flex !important;
 }
 
 .flex-jc-sb {
@@ -410,43 +410,328 @@ button:hover::before,
 }
 
 .shorten-form {
-  width: 80%;
-  margin: auto;
-  padding: 3rem 4rem;
+  width: 86%;
+  margin: auto auto -5rem;
+  position: relative;
+  padding: 2rem 1.5rem;
   border-radius: 10px;
-  background: #3b3054 url("../images/bg-shorten-desktop.svg");
+  background: #3b3054 url("../images/bg-shorten-mobile.svg") no-repeat top right;
+}
+
+@media (min-width: 40em) {
+  .shorten-form {
+    width: 76%;
+    padding: 3rem 4rem;
+    background: #3b3054 url("../images/bg-shorten-desktop.svg");
+  }
 }
 
 .shorten-form form {
   display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 40em) {
+  .shorten-form form {
+    flex-direction: row;
+  }
 }
 
 .shorten-form form input {
   border: none;
   outline: none;
-  font-size: 18px;
-  border-radius: 12px;
-  padding: 18px 32px;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 0.75rem 1.125rem;
   font-family: 'Poppins', sans-serif;
 }
 
+@media (min-width: 40em) {
+  .shorten-form form input {
+    font-size: 1.125rem;
+    border-radius: 0.75rem;
+    padding: 1.125rem 2rem;
+  }
+}
+
 .shorten-form form input[type="url"] {
-  width: 77.5%;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 40em) {
+  .shorten-form form input[type="url"] {
+    width: 77.5%;
+    margin-bottom: 0;
+  }
 }
 
 .shorten-form form input[type="url"]::placeholder {
   color: #9e9aa7;
-  font-size: 19px;
+  font-size: 1rem;
   text-shadow: 0 0 0px;
 }
 
-.shorten-form form input[type="submit"] {
-  width: 20%;
+@media (min-width: 40em) {
+  .shorten-form form input[type="url"]::placeholder {
+    font-size: 1.1875rem;
+  }
+}
+
+.shorten-form form .button {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
   color: white;
-  font-size: 18px;
+  font-size: 1.125rem;
   cursor: pointer;
   font-weight: 700;
   background: #2acfcf;
   margin-left: auto;
+  padding: 0.625rem 1.125rem;
+}
+
+@media (min-width: 40em) {
+  .shorten-form form .button {
+    width: 20%;
+    border-radius: 0.75rem;
+  }
+}
+
+.statistics {
+  background: #F0F1F6;
+  padding: 9rem 0 5rem;
+}
+
+@media (min-width: 40em) {
+  .statistics {
+    padding: 9rem 0 7rem;
+  }
+}
+
+.statistics__intro {
+  text-align: center;
+}
+
+.statistics__intro h1 {
+  color: #35323e;
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 40em) {
+  .statistics__intro h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.statistics__intro p {
+  width: auto;
+  margin: auto;
+  font-size: 1rem;
+  padding: 0 1rem;
+  color: #9e9aa7;
+}
+
+@media (min-width: 40em) {
+  .statistics__intro p {
+    width: 33rem;
+    font-size: 1.125rem;
+    padding: 0;
+  }
+}
+
+.statistics__cards__container {
+  max-width: 70rem;
+  margin: auto;
+  display: flex;
+  margin-top: 6rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@media (min-width: 40em) {
+  .statistics__cards__container {
+    flex-direction: row;
+  }
+}
+
+.statistics__cards__container .statistics__card {
+  width: 20rem;
+  text-align: center;
+  background: white;
+  border-radius: 5px;
+  padding: 0 1.5rem 1rem;
+  margin: auto;
+}
+
+@media (min-width: 40em) {
+  .statistics__cards__container .statistics__card {
+    margin: 0;
+    width: 22rem;
+    text-align: left;
+  }
+}
+
+.statistics__cards__container .statistics__card:nth-child(2) {
+  margin-top: 5.5rem;
+}
+
+@media (min-width: 40em) {
+  .statistics__cards__container .statistics__card:nth-child(2) {
+    margin-top: 2.5rem;
+  }
+}
+
+.statistics__cards__container .statistics__card:last-child {
+  margin-top: 5.5rem;
+}
+
+@media (min-width: 40em) {
+  .statistics__cards__container .statistics__card:last-child {
+    margin-top: 5rem;
+  }
+}
+
+.statistics__cards__container .statistics__card .card__img {
+  background: #3b3054;
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: relative;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 40em) {
+  .statistics__cards__container .statistics__card .card__img {
+    left: 0;
+    transform: none;
+  }
+}
+
+.statistics__cards__container .statistics__card h3 {
+  color: #35323e;
+  margin: 0;
+  font-size: 1.375rem;
+}
+
+.statistics__cards__container .statistics__card p {
+  color: #9e9aa7;
+}
+
+.boost {
+  text-align: center;
+  padding: 5.5rem 0;
+  background: #3b3054 url("../images/bg-boost-mobile.svg");
+}
+
+@media (min-width: 40em) {
+  .boost {
+    padding: 2.6rem 0;
+    background: #3b3054 url("../images/bg-boost-desktop.svg");
+  }
+}
+
+.boost__content h1 {
+  color: white;
+  margin-top: 0;
+  font-size: 1.7rem;
+}
+
+@media (min-width: 40em) {
+  .boost__content h1 {
+    font-size: 2.3rem;
+  }
+}
+
+.boost__content .button {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.footer {
+  background: #232127;
+  padding: 4rem 0;
+}
+
+.footer .container {
+  display: block;
+  text-align: center;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr 0.7fr;
+}
+
+@media (min-width: 40em) {
+  .footer .container {
+    display: grid;
+    text-align: left;
+  }
+}
+
+.footer .container img {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 40em) {
+  .footer .container img {
+    margin-bottom: 0;
+  }
+}
+
+.footer__links {
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 40em) {
+  .footer__links {
+    margin-bottom: 0;
+  }
+}
+
+.footer__links a {
+  color: #9e9aa7;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__links a:first-child {
+  color: white;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.footer__links a:hover {
+  color: #2acfcf;
+}
+
+.footer__social {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+@media (min-width: 40em) {
+  .footer__social {
+    justify-content: unset;
+  }
+}
+
+.footer__social svg {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__social svg:hover path {
+  fill: #2acfcf;
+}
+
+.footer__social svg:not(:last-child) {
+  margin-right: 1.125rem;
 }
 /*# sourceMappingURL=style.css.map */

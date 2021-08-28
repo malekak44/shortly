@@ -1,0 +1,109 @@
+.statistics {
+    background: #F0F1F6;
+    padding: 9rem 0 5rem;
+
+    @include breakpoint-up(medium) {
+        padding: 9rem 0 7rem;
+    }
+
+    &__intro {
+        text-align: center;
+
+        h1 {
+            color: $veryDarkBlue;
+            font-size: 1.7rem;
+            margin-bottom: 0.5rem;
+
+            @include breakpoint-up(medium) {
+                font-size: 2.5rem;
+            }
+        }
+
+        p {
+            width: auto;
+            margin: auto;
+            font-size: 1rem;
+            padding: 0 1rem;
+            color: $grayishViolet;
+
+            @include breakpoint-up(medium) {
+                width: 33rem;
+                font-size: 1.125rem;
+                padding: 0;
+            }
+        }
+    }
+
+    &__cards__container {
+        max-width: 70rem;
+        margin: auto;
+        display: flex;
+        margin-top: 6rem;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @include breakpoint-up(medium) {
+            flex-direction: row;
+        }
+
+        .statistics__card {
+            width: 20rem;
+            text-align: center;
+            background: white;
+            border-radius: 5px;
+            padding: 0 1.5rem 1rem;
+            margin: auto;
+
+            @include breakpoint-up(medium) {
+                margin: 0;
+                width: 22rem;
+                text-align: left;
+            }
+
+            &:nth-child(2) {
+                margin-top: 5.5rem;
+
+                @include breakpoint-up(medium) {
+                    margin-top: 2.5rem;
+                }
+            }
+
+            &:last-child {
+                margin-top: 5.5rem;
+
+                @include breakpoint-up(medium) {
+                    margin-top: 5rem;
+                }
+            }
+
+            .card__img {
+                background: $darkViolet;
+                display: grid;
+                place-items: center;
+                width: 5rem;
+                height: 5rem;
+                border-radius: 50%;
+                position: relative;
+                bottom: 2.5rem;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @include breakpoint-up(medium) {
+                    left: 0;
+                    transform: none;
+                }
+            }
+
+            h3 {
+                color: $veryDarkBlue;
+                margin: 0;
+                font-size: 1.375rem;
+            }
+
+            p {
+                color: $grayishViolet;
+            }
+        }
+    }
+}

@@ -1,39 +1,76 @@
 .shorten-form {
-    width: 80%;
-    margin: auto;
-    padding: 3rem 4rem;
+    width: 86%;
+    margin: auto auto -5rem;
+    position: relative;
+    padding: 2rem 1.5rem;
     border-radius: 10px;
-    background: $darkViolet url('../images/bg-shorten-desktop.svg');
+    background: $darkViolet url('../images/bg-shorten-mobile.svg') no-repeat top right;
+
+    @include breakpoint-up(medium) {
+        width: 76%;
+        padding: 3rem 4rem;
+        background: $darkViolet url('../images/bg-shorten-desktop.svg');
+    }
 
     form {
         display: flex;
+        flex-direction: column;
+
+        @include breakpoint-up(medium) {
+            flex-direction: row;
+        }
 
         input {
             border: none;
             outline: none;
-            font-size: 18px;
-            border-radius: 12px;
-            padding: 18px 32px;
+            font-size: 1rem;
+            border-radius: 5px;
+            padding: 0.75rem 1.125rem;
             font-family: 'Poppins', sans-serif;
 
+            @include breakpoint-up(medium) {
+                font-size: 1.125rem;
+                border-radius: 0.75rem;
+                padding: 1.125rem 2rem;
+            }
+
             &[type="url"] {
-                width: 77.5%;
+                width: 100%;
+                margin-bottom: 1rem;
+
+                @include breakpoint-up(medium) {
+                    width: 77.5%;
+                    margin-bottom: 0;
+                }
 
                 &::placeholder {
                     color: $grayishViolet;
-                    font-size: 19px;
+                    font-size: 1rem;
                     text-shadow: 0 0 0px;
+
+                    @include breakpoint-up(medium) {
+                        font-size: 1.1875rem;
+                    }
                 }
             }
+        }
 
-            &[type="submit"] {
+        .button {
+            width: 100%;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.125rem;
+            cursor: pointer;
+            font-weight: 700;
+            background: $cyan;
+            margin-left: auto;
+            padding: 0.625rem 1.125rem;
+
+            @include breakpoint-up(medium) {
                 width: 20%;
-                color: white;
-                font-size: 18px;
-                cursor: pointer;
-                font-weight: 700;
-                background: $cyan;
-                margin-left: auto;
+                border-radius: 0.75rem;
             }
         }
     }

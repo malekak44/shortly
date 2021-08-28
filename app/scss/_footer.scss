@@ -1,0 +1,73 @@
+.footer {
+    background: $veryDarkViolet;
+    padding: 4rem 0;
+
+    .container {
+        display: block;
+        text-align: center;
+        grid-template-columns: 1.8fr 1fr 1fr 1fr 0.7fr;
+
+        @include breakpoint-up(medium) {
+            display: grid;
+            text-align: left;
+        }
+
+        img {
+            margin-bottom: 2rem;
+
+            @include breakpoint-up(medium) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__links {
+        margin-bottom: 2rem;
+
+        @include breakpoint-up(medium) {
+            margin-bottom: 0;
+        }
+
+        a {
+            &:first-child {
+                color: white;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+
+            color: $grayishViolet;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: $cyan;
+            }
+        }
+    }
+
+    &__social {
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+
+        @include breakpoint-up(medium) {
+            justify-content: unset;
+        }
+
+        svg {
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                path {
+                    fill: $cyan;
+                }
+            }
+
+            &:not(:last-child) {
+                margin-right: 1.125rem;
+            }
+        }
+    }
+}
