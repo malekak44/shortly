@@ -1,0 +1,40 @@
+.shorten-form {
+    width: 80%;
+    margin: auto;
+    padding: 3rem 4rem;
+    border-radius: 10px;
+    background: $darkViolet url('../images/bg-shorten-desktop.svg');
+
+    form {
+        display: flex;
+
+        input {
+            border: none;
+            outline: none;
+            font-size: 18px;
+            border-radius: 12px;
+            padding: 18px 32px;
+            font-family: 'Poppins', sans-serif;
+
+            &[type="url"] {
+                width: 77.5%;
+
+                &::placeholder {
+                    color: $grayishViolet;
+                    font-size: 19px;
+                    text-shadow: 0 0 0px;
+                }
+            }
+
+            &[type="submit"] {
+                width: 20%;
+                color: white;
+                font-size: 18px;
+                cursor: pointer;
+                font-weight: 700;
+                background: $cyan;
+                margin-left: auto;
+            }
+        }
+    }
+}

@@ -27,7 +27,7 @@ a {
 
 // Spacing
 .container {
-    max-width: 69.375rem;
+    max-width: 66.5rem;
     margin: 0 auto;
 
     &--pall {
@@ -36,7 +36,7 @@ a {
         padding-bottom: 4.375rem;
         padding-left: 1.5rem;
 
-        @include breakpoint-up(large) {
+        @include breakpoint-up(medium) {
             padding-top: 6rem;
             padding-bottom: 6rem;
         }
@@ -46,7 +46,7 @@ a {
         padding-top: 4.375rem;
         padding-bottom: 4.375rem;
 
-        @include breakpoint-up(large) {
+        @include breakpoint-up(medium) {
             padding-top: 6rem;
             padding-bottom: 6rem;
         }
@@ -60,7 +60,7 @@ a {
     &--pt {
         padding-top: 4.375rem;
 
-        @include breakpoint-up(large) {
+        @include breakpoint-up(medium) {
             padding-top: 6rem;
         }
     }
@@ -72,7 +72,7 @@ a {
     &--pb {
         padding-bottom: 4.375rem;
 
-        @include breakpoint-up(large) {
+        @include breakpoint-up(medium) {
             padding-bottom: 6rem;
         }
     }
@@ -141,7 +141,7 @@ button,
 }
 
 .hide-for-desktop {
-    @include breakpoint-up(large) {
+    @include breakpoint-up(medium) {
         display: none;
     }
 }

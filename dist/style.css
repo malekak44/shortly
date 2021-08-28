@@ -67,7 +67,7 @@ a {
 }
 
 .container {
-  max-width: 69.375rem;
+  max-width: 66.5rem;
   margin: 0 auto;
 }
 
@@ -78,7 +78,7 @@ a {
   padding-left: 1.5rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .container--pall {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -90,7 +90,7 @@ a {
   padding-bottom: 4.375rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .container--py {
     padding-top: 6rem;
     padding-bottom: 6rem;
@@ -106,7 +106,7 @@ a {
   padding-top: 4.375rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .container--pt {
     padding-top: 6rem;
   }
@@ -120,7 +120,7 @@ a {
   padding-bottom: 4.375rem;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .container--pb {
     padding-bottom: 6rem;
   }
@@ -186,7 +186,7 @@ button:hover::before,
   }
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .hide-for-desktop {
     display: none;
   }
@@ -203,9 +203,9 @@ button:hover::before,
   padding-bottom: 0;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .header nav {
-    padding-top: 3rem;
+    padding-top: 3.2rem;
   }
 }
 
@@ -213,7 +213,7 @@ button:hover::before,
   flex: 1;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 40em) {
   .header__logo {
     flex: 0;
   }
@@ -271,14 +271,14 @@ button:hover::before,
 
 .header__links {
   flex: 2;
-  margin-left: 2.5rem;
+  margin-left: 2.8rem;
   margin-top: -0.8125rem;
 }
 
 .header__links a {
   position: relative;
   font-weight: 700;
-  font-size: 0.96875rem;
+  font-size: 0.9375rem;
   color: #9e9aa7;
   transition: color 300ms ease-in-out;
 }
@@ -299,40 +299,154 @@ button:hover::before,
 .header__btns .button:first-child {
   background: white;
   color: #9e9aa7;
+  margin-right: 0.4rem;
 }
 
 .hero {
-  border: 1px solid black;
-  height: 35rem;
-  padding-right: 0;
-  padding-left: 5rem;
+  height: 41rem;
+  margin-top: 1.5rem;
+  padding-left: 0;
+  flex-direction: column;
+}
+
+@media (min-width: 40em) {
+  .hero {
+    height: 35rem;
+    margin-top: 4rem;
+    padding-left: 7.7rem;
+    flex-direction: row;
+  }
 }
 
 .hero__text {
+  order: 1;
   flex: 1;
+  display: block;
+  margin-top: 1.7rem;
+  align-self: baseline;
 }
 
-.hero__text h1 {
+@media (min-width: 40em) {
+  .hero__text {
+    order: -1;
+    display: flex;
+    margin-top: 0;
+  }
+}
+
+.hero__text__content {
+  width: auto;
+  margin-top: 0;
+  margin-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+@media (min-width: 40em) {
+  .hero__text__content {
+    width: 95%;
+    margin-top: 4rem;
+    margin-left: auto;
+    padding-right: 2rem;
+    text-align: left;
+  }
+}
+
+.hero__text__content h1 {
   margin: 0;
-  font-size: 5rem;
+  font-size: 2.7rem;
   line-height: 1.16;
   color: #35323e;
   letter-spacing: -2.5px;
 }
 
-.hero__text p {
-  width: 33rem;
-  margin: 0 0 2.5rem;
-  font-size: 22px;
+@media (min-width: 40em) {
+  .hero__text__content h1 {
+    font-size: 4.5rem;
+  }
+}
+
+.hero__text__content p {
+  width: 90%;
+  margin: 9px auto 2rem;
+  font-size: 18px;
   color: #9e9aa7;
-  text-shadow: 0 0 0px;
+  text-shadow: 0px 0px 0px;
+  line-height: 1.7;
+}
+
+@media (min-width: 40em) {
+  .hero__text__content p {
+    width: 33rem;
+    margin: 0 0 2rem;
+    font-size: 21px;
+  }
+}
+
+.hero__text__content .button {
+  font-weight: 700;
+  font-size: 1.125rem;
+  padding: 0.75rem 2.25rem;
 }
 
 .hero__image {
+  order: -1;
   flex: 1;
+  width: 100%;
   height: 100%;
-  border: 1px solid black;
   background: url("../images/illustration-working.svg");
   background-repeat: no-repeat;
+  background-size: 132%;
+  background-position: 24px;
+}
+
+@media (min-width: 40em) {
+  .hero__image {
+    order: 1;
+    width: auto;
+    background-size: auto;
+    background-position: 0% 0%;
+  }
+}
+
+.shorten-form {
+  width: 80%;
+  margin: auto;
+  padding: 3rem 4rem;
+  border-radius: 10px;
+  background: #3b3054 url("../images/bg-shorten-desktop.svg");
+}
+
+.shorten-form form {
+  display: flex;
+}
+
+.shorten-form form input {
+  border: none;
+  outline: none;
+  font-size: 18px;
+  border-radius: 12px;
+  padding: 18px 32px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.shorten-form form input[type="url"] {
+  width: 77.5%;
+}
+
+.shorten-form form input[type="url"]::placeholder {
+  color: #9e9aa7;
+  font-size: 19px;
+  text-shadow: 0 0 0px;
+}
+
+.shorten-form form input[type="submit"] {
+  width: 20%;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: 700;
+  background: #2acfcf;
+  margin-left: auto;
 }
 /*# sourceMappingURL=style.css.map */
